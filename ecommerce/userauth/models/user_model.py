@@ -3,6 +3,10 @@ from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
 
+from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
+
 
 class UserManager(BaseUserManager):
     def create_user(self, email, username, password=None):
@@ -38,6 +42,16 @@ class UserManager(BaseUserManager):
 
 
 class Kullanicilar(AbstractBaseUser):
+
+    """
+        Kullanıcının son oturum açma tarihi ve hesabın oluşturulma tarihi  Kullanicilar modelinde tutulur
+
+        ör:
+        user = Kullanicilar.objects.first()
+        user.date_joined
+        user.last_login
+    """
+    
     email = models.EmailField(
         verbose_name='email address',
         max_length=255,
@@ -53,6 +67,7 @@ class Kullanicilar(AbstractBaseUser):
         self.username=self.username.lower()
         super().save(*args, **kwargs)
 
+    date_joined = models.DateTimeField(_("date joined"), default=timezone.now)
 
     objects = UserManager()
 

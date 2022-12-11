@@ -6,6 +6,9 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.core.exceptions import ValidationError
 
 from userauth.models.user_model import Kullanicilar
+from userauth.models.adress import Adress , BillingAdress
+from userauth.models.profile import UserProfile
+from userauth.models.role import Role
 
 class UserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
@@ -75,5 +78,15 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(Kullanicilar, UserAdmin)
+admin.site.register(Adress)
+admin.site.register(BillingAdress)
+admin.site.register(UserProfile)
+admin.site.register(Role)
+
+
+
+
+
+
 
 admin.site.unregister(Group)
