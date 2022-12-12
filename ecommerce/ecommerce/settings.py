@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'userauth.apps.UserauthConfig',
+    'mptt',
+    'product.apps.ProductConfig',
 ]
 
 AUTH_USER_MODEL = 'userauth.Kullanicilar'
