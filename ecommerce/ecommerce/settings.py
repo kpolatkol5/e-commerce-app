@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'userauth.apps.UserauthConfig',
+    'core.apps.CoreConfig',
 ]
 
 AUTH_USER_MODEL = 'userauth.Kullanicilar'
@@ -57,7 +58,9 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / "templates"
+        ],
 
         'APP_DIRS': True,
         'OPTIONS': {
