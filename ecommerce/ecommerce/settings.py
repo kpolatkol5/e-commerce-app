@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'userauth.apps.UserauthConfig',
     'core.apps.CoreConfig',
+    'mptt',
+    'product.apps.ProductConfig',
 ]
 
 AUTH_USER_MODEL = 'userauth.Kullanicilar'
