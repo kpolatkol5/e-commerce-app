@@ -1,0 +1,78 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    <!-- Document Meta
+    ============================================= -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--IE Compatibility Meta-->
+    <meta name="author" content="zytheme" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Multi-purpose Business html5 template">
+    <link href="{% static 'assets/images/favicon/favicon.png' %}" rel="icon">
+
+
+    <!-- Fonts
+    ============================================= -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7CMontserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CPlayfair+Display:400,400i"
+        rel="stylesheet">
+
+    <link href="{% static 'assets/css/external.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/settings.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/layers.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/navigation.css' %}">
+
+
+    <title>Hebes | Multi-purpose Store Template</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loader-eclipse">
+            <div class="loader-content"></div>
+        </div>
+    </div>
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapperParallax" class="wrapper clearfix">
+        {% include 'partials/header.html' %}
+
+        {% block content %}{% endblock content %}
+
+
+        {% include 'partials/footer.html' %}
+    </div><!-- #wrapper end -->
+
+    <!-- Footer Scripts
+        ============================================= -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/functions.js' %}"></script>
+    <!-- RS5.0 Core JS Files -->
+    <script src="{% static 'assets/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'assets/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.slideanims.min.js'%}"></script>
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.layeranimation.min.js'%}"></script>
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'assets/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <!-- RS Configration JS Files -->
+    <script src="{% static 'assets/js/rsconfig.js' %}"></script>
+
+
+
+
+
+</body>
+
+</html>
