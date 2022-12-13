@@ -3,11 +3,6 @@ from django.views.generic import TemplateView
 from core.models.slider import Slider
 
 
-
-def anasayfa(request):
-    return render(request , "core/index.html" , context={"data":"data"} )
-
-
 class HomePageView(TemplateView):
     template_name = "core/index.html"
 
