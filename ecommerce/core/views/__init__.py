@@ -1,0 +1,1 @@
+from core.views.index import HomePageView
