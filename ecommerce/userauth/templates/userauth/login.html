@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Title #1
+
+
+============================================= -->
+
+<section id="page-title" class="page-title mt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="title title-1 text-center">
+                    <div class="title--content">
+                        <div class="title--heading">
+                            <h1>Login & Register {{categories}}</h1>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <ol class="breadcrumb">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li class="active">Login & Register</li>
+                    </ol>
+                </div>
+                <!-- .title end -->
+            </div>
+            <!-- .col-lg-12 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #page-title end -->
+
+<!-- register-login
+============================================= -->
+<section id="register-login" class="register-login pt-30 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mx-auto col-lg-5">
+                <div class="register-title">
+                    <h4>Hesabınıza giriş yapın</h4>
+                    <p>Bu öğedeki tüm harika özellikleri keşfetmek için hesabınıza giriş yapın</p>
+                </div>
+                <!-- .register-title end -->
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" id="user-name" placeholder="User Name">
+                            </div>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" id="login-password"
+                                    placeholder="Your Password">
+                            </div>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-40">
+                            <div class="input-checkbox inline-block">
+                                <label class="label-checkbox">Giriş bilgilerimi Hatırla
+                                    <input type="checkbox" checked>
+                                    <span class="check-indicator"></span>
+                                </label>
+                            </div>
+                            <a href="#" class="forget--password">Şifreni mi unuttun?</a>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-30">
+                            <button type="submit" class="btn btn--primary btn--rounded">Giriş Yap</button>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-50">
+                            <div class="social--login">
+                                <span class="title">OR LOGIN WITH</span>
+                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="google-plus"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                    </div>
+                    <!-- .row end -->
+                </form>
+            </div>
+            <!-- .col-lg-6 end -->
+      
+            <!-- .col-lg-6 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #checkout end -->
+
+{% endblock content %}
+
+{% block js %}
+{% if messages %}
+{% for mesaj in messages  %}
+<script>
+    Swal.fire({
+        icon: '{{mesaj.tags}}',
+        title: '{{mesaj}}',
+        //text: '',
+        //footer: '<a href="">Why do I have this issue?</a>'
+      })
+</script>
+{% endfor %}
+{% endif %}
+
+
+
+{% endblock js %}
+ 

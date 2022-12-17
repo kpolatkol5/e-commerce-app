@@ -18,8 +18,7 @@ class Products(models.Model):
     slug = models.SlugField(unique=True, verbose_name='Slug', editable=False)
     # it will change to CKeditor
     description = models.TextField(verbose_name="Ürün Açıklaması")
-    price = models.DecimalField(
-        max_digits=10, decimal_places=2, verbose_name="Satış Fiyatı")
+    price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Satış Fiyatı")
     stock = models.IntegerField(verbose_name='Stok Sayısı')
     category = models.ForeignKey(
         Categories,
