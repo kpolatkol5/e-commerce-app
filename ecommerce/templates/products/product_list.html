@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="category" class="category category-2 pt-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-9">
+                {% include 'products/partials/filter_options.html' %}
+                <div class="row mb-60">
+                    {% include 'products/product_card.html' %}
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-3">
+                {% include 'products/partials/sidebar.html' %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
