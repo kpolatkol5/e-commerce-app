@@ -21,7 +21,7 @@ class Option_value(models.Model):
 
     name = models.CharField(
         max_length=50,
-        verbose_name="orpsiyon adi "
+        verbose_name="orpsiyon adi"
     )
 
     def __str__(self):

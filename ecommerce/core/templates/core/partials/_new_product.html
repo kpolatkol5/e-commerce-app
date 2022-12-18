@@ -1,0 +1,572 @@
+<!-- products #1
+        ============================================= -->
+<section id="products1" class="products pt-120 pb-140 pt-60-xs pb-60-xs">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="heading heading-3 mb-30 text-center">
+                    <h2 class="heading--title">NEW ARRIVALS</h2>
+                </div>
+            </div>
+            <!-- .col-lg-12 end -->
+        </div>
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <!-- products Filter
+			        ============================================= -->
+                <div class="products-tabs  products-filter">
+                    <ul class="nav nav-tabs justify-content-center" role="tablist">
+                        {% for kategori in new_produt_categori  %}
+                        <li><a class="active" href="#chair1" aria-controls="chair" role="tab"
+                                data-toggle="tab">CHAIR</a></li>
+
+                        {% endfor %}
+
+                    </ul>
+                    <div class="tab-content">
+
+
+                        <div role="tabpanel" class="tab-pane show fade active" id="chair1">
+                            <div class="row">
+                                <!-- Product item #1 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/1.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                            </div>
+                            <!-- .row end -->
+                        </div><!-- .tab-pane end -->
+
+
+
+                        {% comment %}
+
+                        <div role="tabpanel" class="tab-pane show fade" id="sofas">
+                            <div class="row">
+                                <!-- Product item #1 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/11.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                            </div>
+                            <!-- .row end -->
+                        </div><!-- .tab-pane end -->
+
+
+                        <div role="tabpanel" class="tab-pane show fade" id="tabels">
+                            <div class="row">
+                                <!-- Product item #1 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/9.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- product item #2 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/10.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- Product item #3 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/11.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Amazing Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- Product item #4 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/12.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Black wood Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+
+                            </div>
+                            <!-- .row end -->
+                        </div><!-- .tab-pane end -->
+
+                        <div role="tabpanel" class="tab-pane show fade" id="lamps">
+                            <div class="row">
+                                <!-- Product item #1 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/12.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- product item #2 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/13.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- Product item #3 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/14.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Amazing Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- Product item #4 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/15.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Black wood Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                            </div>
+                            <!-- .row end -->
+                        </div><!-- .tab-pane end -->
+
+                        <div role="tabpanel" class="tab-pane show fade" id="accessories">
+                            <div class="row">
+                                <!-- Product item #1 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/15.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- product item #2 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/10.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Great Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- Product item #3 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/12.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Amazing Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                                <!-- Product item #4 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="assets/images/products/grid/5col/7.jpg" alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">Hebes Black wood Chair</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>$ 42.00</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>ADD TO CART</a>
+                                                    <a data-toggle="modal" data-target="#product-popup"><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                    <a data-toggle="modal" data-target="#compare-popup"><i
+                                                            class="ti-control-shuffle"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+                                <!-- .product-item end -->
+                            </div>
+                            <!-- .row end -->
+                        </div><!-- .tab-pane end -->
+                        {% endcomment %}
+                    </div>
+                </div>
+                <!-- .products-tabs end -->
+            </div><!-- .col-lg-12 end -->
+        </div><!-- .row end -->
+
+        <div class="row mt-5">
+            <div class="col-sm-12 col-md-12 col-lg-12 text--center">
+                <a href="#" class="btn--more btn--more-1">VIEW ALL PRODUCTS</a>
+            </div>
+            <!-- .col-lg-12 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #products end -->
