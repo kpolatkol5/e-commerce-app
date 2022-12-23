@@ -3,9 +3,12 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from ecommerce.settings import LOGIN_URL
+from django.shortcuts import get_object_or_404
+
 # model import
 from core.models.slider import Slider
 from product.models.categories import Categories
+from product.models.products import Products
 
 
 class Base_view(LoginRequiredMixin, UserPassesTestMixin):
@@ -29,4 +32,9 @@ class HomePageView(TemplateView):
         context["new_produt_categori"] = Categories.objects.exclude(
             parent=None
         )
+        context["populer_products"] = Products.objects.filter(
+            tags__name="Popüler Ürünler",
+            is_active=True
+        )
+
         return context
