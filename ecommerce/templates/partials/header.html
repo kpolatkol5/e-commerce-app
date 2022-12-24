@@ -22,22 +22,22 @@
                                 <div class="container">
                                     <div class="row">
                                         <!-- Column #1 4 adet-->
-                                        <div class="col-md-12 col-lg-3">
-                                            <ul>
-                                                <li>
-                                                    <a href="home-1.html">Home 1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="home-2.html">Home 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="home-3.html">Home 3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="home-4.html">Home 4</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        
+                                        {% for kategori in categories %}
+                                        {% if not kategori.parent %}
+                                            <div class="col-md-12 col-lg-3">
+                                                <ul>
+                                                    {% for alt_kategori in kategori.child.all   %}
+
+                                                    <li>
+                                                        <a href="home-1.html">{{alt_kategori.name}}</a>
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                        
                                         <!-- .col-lg-3 end -->
                                     </div>
                                     <!-- .row end -->
