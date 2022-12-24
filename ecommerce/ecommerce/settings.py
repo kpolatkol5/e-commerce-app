@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'mptt',
     'product.apps.ProductConfig',
+    'colorfield',
     'django_extensions',
+
 ]
 
 AUTH_USER_MODEL = 'userauth.Kullanicilar'
@@ -131,10 +133,9 @@ MPTT_ADMIN_LEVEL_INDENT = 20
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS=[
+STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-
 
 
 MEDIA_ROOT = BASE_DIR / "uploads"

@@ -3,7 +3,9 @@
 <header id="navbar-spy" class="header header-1 header-transparent">
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index-2.html">
+
+            <a class="navbar-brand" href="{% url 'home-page' %}">
+
                 <img class="logo" src="{% static 'assets/images/logo/logo-dark.png' %}" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -16,11 +18,13 @@
                 <ul class="navbar-nav mr-auto">
                     <!-- home Menu -->
                     <li class="has-dropdown mega-dropdown active">
+
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Kategoriler</a>
                         <ul class="dropdown-menu mega-dropdown-menu">
                             <li>
                                 <div class="container">
                                     <div class="row">
+
                                         <!-- Column #1 4 adet-->
                                         
                                         {% for kategori in categories %}
@@ -38,6 +42,7 @@
                                         {% endif %}
                                     {% endfor %}
                                         
+
                                         <!-- .col-lg-3 end -->
                                     </div>
                                     <!-- .row end -->
@@ -54,6 +59,7 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-submenu">
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Products Layout</a>
+
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="shop-layout-fullwidth.html">fullwidth</a>
@@ -90,6 +96,7 @@
                                 </ul>
                             </li>
 
+
                         </ul>
                     </li><!-- li end -->
 
@@ -116,15 +123,18 @@
                                                     </li>
                                                     <li>
                                                         <a href="shop-3columns.html">bed</a>
+
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="menu--img">
+
                                                 <img src="assets/images/slider/layers/1.png" alt="img"
                                                     class="img-fluid">
                                             </div>
                                         </div>
                                         <!-- .col-lg-5ths end -->
+
 
                                         <!-- Column #2 -->
                                         <div class="col-md-12 col-lg-5ths">
@@ -142,15 +152,20 @@
                                                     </li>
                                                     <li>
                                                         <a href="shop-3columns.html">Desktop Lamp</a>
+
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="menu--img">
+
+
                                                 <img src="assets/images/slider/layers/37.png" alt="img"
+
                                                     class="img-fluid">
                                             </div>
                                         </div>
                                         <!-- .col-lg-5ths end -->
+
 
                                         <!-- Column #3 -->
                                         <div class="col-md-12 col-lg-5ths">
@@ -168,15 +183,19 @@
                                                     </li>
                                                     <li>
                                                         <a href="shop-3columns.html">wood tables</a>
+
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="menu--img">
-                                                <img src="assets/images/slider/layers/34.png" alt="img"
+
+                                                <img src="{% static 'assets/images/slider/layers/35.png' %}" alt="img"
+
                                                     class="img-fluid">
                                             </div>
                                         </div>
                                         <!-- .col-lg-5ths end -->
+
 
                                         <!-- Column #4 -->
                                         <div class="col-md-12 col-lg-5ths">
@@ -194,41 +213,19 @@
                                                     </li>
                                                     <li>
                                                         <a href="shop-3columns.html">Scarves</a>
+
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="menu--img">
-                                                <img src="assets/images/slider/layers/35.png" alt="img"
+
+                                                <img src="{% static 'assets/images/slider/layers/36.png' %}" alt="img"
+
                                                     class="img-fluid">
                                             </div>
                                         </div>
                                         <!-- .col-lg-5ths end -->
 
-                                        <!-- Column #5 -->
-                                        <div class="col-md-12 col-lg-5ths">
-                                            <div class="collection--menu-content">
-                                                <h5>Sale Off</h5>
-                                                <ul>
-                                                    <li>
-                                                        <a href="shop-layout-fullwidth.html">Sunglasses</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-layout-sidebar-left.html">jackets</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-4columns.html">Shirts</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shop-3columns.html">Socks</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="menu--img">
-                                                <img src="assets/images/slider/layers/36.png" alt="img"
-                                                    class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <!-- .col-lg-5ths end -->
                                     </div>
                                     <!-- .row end -->
                                 </div>
@@ -241,6 +238,7 @@
                     <!-- Blog Menu-->
                     <li class="has-dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Blog</a>
+
            
                     </li><!-- li end -->
 
@@ -253,6 +251,7 @@
                                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Headers</a>
                                 <ul class="dropdown-menu">
                                     <li>
+
                                         <a href="header-1.html">Header 1</a>
                                     </li>
                                     <li>
@@ -272,6 +271,7 @@
                                     </li>
                                     <li>
                                         <a href="header-7.html">Header 7</a>
+
                                     </li>
                                 </ul>
                             </li>
@@ -353,10 +353,16 @@
                                         <a class="cart-cancel" href="#"><i class="lnr lnr-cross"></i></a>
                                     </li>
                                 </ul>
+
                             </div>
                             <div class="cart-total">
                                 <div class="total-desc">
                                     Sub total
+
+                                </div>
+                                <div class="total-price">
+                                    $48.00
+
                                 </div>
                                 <div class="total-price">
                                     $48.00
@@ -368,6 +374,14 @@
                                 <a class="btn btn--white btn--bordered btn--rounded" href="#">view cart </a>
                                 <a class="btn btn--primary btn--rounded" href="#">Checkout</a>
                             </div>
+
+                            <div class="clearfix">
+                            </div>
+                            <div class="cart--control">
+                                <a class="btn btn--white btn--bordered btn--rounded" href="#">view cart </a>
+                                <a class="btn btn--primary btn--rounded" href="#">Checkout</a>
+                            </div>
+
                         </div>
                     </div>
                     <!-- .module-cart end -->
