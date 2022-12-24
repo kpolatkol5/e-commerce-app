@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="page-title" class="page-title mt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="title title-1 text-center">
+                    <div class="title--content">
+                        <div class="title--heading">
+                            <h1>Kayıt Ol {{categories}}</h1>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <ol class="breadcrumb">
+                        <li><a href="index-2.html"></a></li>
+                        <li class="active">Kayıt Ol</li>
+                    </ol>
+                </div>
+                <!-- .title end -->
+            </div>
+            <!-- .col-lg-12 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #page-title end -->
+
+<section id="register-login" class="register-login pt-30 pb-150">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12 mx-auto col-md-6 col-lg-6 offset-lg-1">
+                <div class="register-title">
+                    <h4>Hemen hesabını oluştur</h4>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et</p>
+                </div>
+                <!-- .register-title end -->
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"  required> 
+                            </div>
+                        </div>
+                        <!-- .col-lg-6 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" name="username" class="form-control" id="register-user-name" placeholder="User Name" required>
+                            </div>
+                        </div>
+                        <!-- .col-lg-6 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="phone"  id="Phone" placeholder="Phone" required>
+                            </div>
+                        </div>
+                        <!-- .col-lg-6 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" "request.email}}" id="email" required placeholder="Email">
+                            </div>
+                        </div>
+                        <!-- .col-lg-6 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" required  name="password" id="register-password"
+                                    placeholder="Password">
+                            </div>
+                        </div>
+                        <!-- .col-lg-6 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                            <div class="form-group mb-40">
+                                <input type="password" class="form-control" required name="repassword" id="register-password-confirm"
+                                    placeholder="Re Password">
+                            </div>
+                        </div>
+                        <!-- .col-lg-6 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-40">
+                            <div class="input-checkbox inline-block">
+                                <label class="label-checkbox">Gizlilik koşullarını kabul ediyorum                                    
+                                    <input type="checkbox" checked>
+                                    <span class="check-indicator"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-12 mb-40">
+                            <button type="submit" class="btn btn--primary btn--rounded">Kayıt Ol</button>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="social--login">
+                                <span class="title">Hızlı Kayı ol</span>
+                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="google-plus"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <!-- .col-lg-12 end -->
+                    </div>
+                    <!-- .row end -->
+                </form>
+            
+            </div>
+            
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+<!-- #checkout end -->
+
+
+{% endblock content %}
+
+
+{% block js %}
+{% if messages %}
+{% for mesaj in messages  %}
+<script>
+    Swal.fire({
+        icon: '{{mesaj.tags}}',
+        title: '{{mesaj}}',
+        //text: '',
+        //footer: '<a href="">Why do I have this issue?</a>'
+      })
+</script>
+{% endfor %}
+{% endif %}
+
+
+
+{% endblock js %}
+ 

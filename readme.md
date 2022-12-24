@@ -1,1 +1,2 @@
-- modal kısmı footer ın altına koydum
+Yapım Aşamasında
+

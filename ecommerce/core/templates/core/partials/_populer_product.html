@@ -1,0 +1,106 @@
+{% load static %}
+
+
+<section id="products1" class="products text-center border">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="heading heading-4 mb-30">
+                    <h2 class="heading--title">POPÜLER URUNLER</h2>
+                </div>
+            </div>
+            <!-- .col-lg-12 end -->
+        </div>
+
+
+        <!-- .row end -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <!-- products Filter
+			============================================= -->
+                <div class="products-tabs products-filter">
+                    <ul class="nav nav-tabs justify-content-center" role="tablist">
+
+                        {% for kategori in  new_produt_categori %}
+                        {% if forloop.first %}
+                        <li><a class="active" href="#banner__{{kategori.id}}" aria-controls="{{kategori.id}}" role="tab"
+                                data-toggle="tab">{{kategori.name}}</a></li>
+                        {% else %}
+                        <li><a href="#banner__{{kategori.id}}" aria-controls="{{kategori.id}}" role="tab"
+                                data-toggle="tab">{{kategori.name}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <div class="tab-content">
+
+                        {% for kategori in  new_produt_categori %}
+
+                        <div role="tabpanel" {% if forloop.first %}class="tab-pane show fade active"
+                            {% else %}class="tab-pane show fade " {% endif %} id="banner__{{kategori.id}}">
+                            <div class="row">
+
+
+                                {% for product  in populer_products  %}
+                                {% if product.category.name == kategori.name %}
+                                <!-- Product item #1 -->
+                                <div class="col-sm-6 col-md-6 col-lg-3">
+                                    <div class="product-item">
+                                        <div class="product--img">
+                                            <a href="product-gallery.html">
+                                                <img src="{% static 'assets/images/products/related/1.jpg' %}"
+                                                    alt="product" />
+                                            </a>
+                                        </div>
+                                        <!-- .product-img end -->
+                                        <div class="product--content">
+                                            <div class="product--title">
+                                                <h3><a href="#">{{product.name}}</a></h3>
+                                            </div>
+                                            <!-- .product-title end -->
+                                            <div class="product--price">
+                                                <span>{{product.price}} tl</span>
+                                            </div>
+                                            <!-- .product-price end -->
+                                            <div class="product--hover">
+                                                <div class="product--action">
+                                                    <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                                            class="icon-bag"></i>Sepete Ekle</a>
+                                                    <a hx-vals='{"product_id": "{{product.id}}"}' hx-trigger="click" hx-target="#product-popup" hx-post="{% url 'htmx_product' %}" data-toggle="modal" data-target="#product-popup"  ><i
+                                                            class="ti-search"></i></a>
+                                                    <a href="#"><i class="ti-heart"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-hover end -->
+                                        </div>
+                                        <!-- .product-content end -->
+                                    </div>
+                                </div>
+
+                                {% endif %}
+                                {% endfor %}
+
+                            </div>
+                            <!-- .row end -->
+                        </div><!-- .tab-pane end -->
+
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- .products-tabs end -->
+            </div><!-- .col-lg-12 end -->
+        </div><!-- .row end -->
+
+        <div class="row mt-5">
+            <div class="col-sm-12 col-md-12 col-lg-12 text--center">
+                <a href="#" class="btn--more btn--more-1">Tüm Ürünleri Görüntüle</a>
+            </div>
+            <!-- .col-lg-12 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>
+
+<div id="product-popup">
+    {% include 'partials/_product-modal.html' %}
+</div>

@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'mptt',
     'product.apps.ProductConfig',
     'colorfield',
+    'django_extensions',
+
 ]
 
 AUTH_USER_MODEL = 'userauth.Kullanicilar'
@@ -72,13 +74,15 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #custom context_processors 
+                'ecommerce.context_processors.custom_context_processors',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
-
+LOGIN_URL = 'auth/login'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -121,6 +125,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+MPTT_ADMIN_LEVEL_INDENT = 20
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

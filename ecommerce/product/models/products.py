@@ -29,7 +29,7 @@ class Products(models.Model):
     product_type = models.CharField(
         choices=PRODUCT_TYPE, max_length=1, verbose_name="Ürün Tipi")
     tags = models.ManyToManyField(
-        Tags, verbose_name="Etiketler")
+        Tags, verbose_name="Etiketler", related_name="products")
     barcode = models.CharField(max_length=50, verbose_name="Ürün Barkodu")
     is_active = models.BooleanField(default=True, verbose_name="Durumu")
     created_at = models.DateTimeField(

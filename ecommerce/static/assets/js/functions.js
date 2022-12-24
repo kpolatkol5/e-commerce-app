@@ -308,6 +308,30 @@
         }
     });
 
+
+    $(".kadir").owlCarousel({
+        thumbs: true,
+        thumbsPrerendered: true,
+        loop: true,
+        margin: 0,
+        autoplay: false,
+        nav: false,
+        dots: false,
+        dotsSpeed: 200,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+   
+
     /* ------------------ MAGNIFIC POPUP ------------------ */
 
     var $imgPopup = $(".img-popup");

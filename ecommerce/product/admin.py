@@ -3,15 +3,20 @@ from product.models.categories import Categories
 from product.models.products import Products
 from product.models.comments import Comments
 from product.models.tags import Tags
-from product.models.variants import Options, OptionValues, ProductOptions, ProductVariants, VariantValues
+from product.models.product_option import *
+from mptt.admin import DraggableMPTTAdmin
 
-admin.site.register(Categories)
+
+admin.site.register(Categories , DraggableMPTTAdmin)
 admin.site.register(Comments)
 admin.site.register(Products)
 admin.site.register(Tags)
 
-admin.site.register(Options)
-admin.site.register(OptionValues)
-admin.site.register(ProductOptions)
-admin.site.register(ProductVariants)
-admin.site.register(VariantValues)
+
+admin.site.register(Option)
+admin.site.register(Product_variations)
+admin.site.register(Sku)
+admin.site.register(Product_variation_options)
+admin.site.register(Option_value)
+
+
