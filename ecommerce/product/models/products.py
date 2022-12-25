@@ -2,6 +2,9 @@ from django.utils.text import slugify
 from django.db import models
 from product.models.categories import Categories
 from product.models.tags import Tags
+# from product.models.comments import Comments
+from datetime import datetime
+
 
 PRODUCT_TYPE = (
     ('P', 'Fiziksel ürün'),
@@ -63,3 +66,22 @@ class Products(models.Model):
             self.slug = self.get_unique_slug()
 
         return super(Products, self).save(*args, **kwargs)
+
+
+class Product_Image(models.Model):
+    product = models.ForeignKey(
+        Products,
+        on_delete=models.CASCADE,
+        related_name="product_image",
+        verbose_name="Ürün",
+    )
+    image = models.ImageField(
+        upload_to=f"{datetime.now().year}/{datetime.now().month}/Product"
+    )
+
+    def __str__(self):
+        return f"{self.product.name}"
+
+    class Meta:
+        verbose_name = "Ürünler Resimi"
+        verbose_name_plural = "Ürünler Resimleri"

@@ -1,0 +1,190 @@
+<div class=" col-12 col-sm-6 col-md-3 col-lg-2 mr-auto">
+    <div class="sidebar cat-sidebar">
+
+        <div class="widget widget-categories2">
+            <div class="widget--title">
+                <h3>Kategoriler</h3>
+            </div>
+
+
+            <div class="widget--content">
+                <ul class="main--list list-unstyled mb-0">
+
+                    {% for kategori in categories %}
+                    {% if not kategori.parent %}
+
+                    <li{% if forloop.first %} class="active" {% endif %}>
+                        <a href="#">{{kategori.name}} <span>21</span></a>
+                        <ul class="inner--list list-unstyled mb-0">
+                            {% for alt_kategori in kategori.child.all   %}
+                            <li><a href="#">{{alt_kategori.name}}<span>21</span></a></li>
+                            {% endfor %}
+                        </ul>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                </ul>
+            </div>
+        </div> <!-- .widget-categories end -->
+
+
+        <div class="widget widget-filter">
+            <div class="widget--title">
+                <h3>Filitrele</h3>
+            </div>
+            <div class="widget--content">
+                <div class="category--filter">
+                    <h4 class="subtitle mt-0">Fiyat Aralığı</h4>
+                    <div id="slider-range"></div>
+                    <p>
+                        <input type="text" id="amount" readonly>
+                    </p>
+                </div>
+
+
+
+                {% for opsiyon  in  option%}
+
+                    {% if opsiyon.name|title  == "Renk" %}
+
+                        <div class="color--filter">
+                            <h4 class="subtitle">Renk</h4>
+
+                            <div class="colors-wrapper">
+                                <a href="#" class="color-1"></a>
+                                <a href="#" class="color-2"></a>
+                                <a href="#" class="color-3"></a>
+                                <a href="#" class="color-4 active"></a>
+                                <a href="#" class="color-5"></a>
+                                <a href="#" class="color-6"></a>
+                                <a href="#" class="color-7"></a>
+                                <a href="#" class="color-8"></a>
+                                <a href="#" class="color-9"></a>
+                                <a href="#" class="color-10"></a>
+                                <a href="#" class="color-11"></a>
+                                <a href="#" class="color-12"></a>
+                            </div>
+                            <form class="widget-color-form d-flex flex-wrap mb-0">
+                                <div class="input-radio">
+                                    <label class="label-radio color-1">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-2">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-3">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-4">
+                                        <input type="radio" name="colorSelect" checked>
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-5">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-6">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-7">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-8">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-9">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-10">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-11">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                <div class="input-radio">
+                                    <label class="label-radio color-12">
+                                        <input type="radio" name="colorSelect">
+                                        <span class="radio-indicator"></span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                            </form>
+
+                        </div>
+
+                    {% elif opsiyon.name|title  == "Beden"  %}
+
+                        <div class="size--filter">
+                            <h4 class="subtitle">Beden</h4>
+
+                            <form class="widget-size-form d-flex flex-wrap mb-0">
+
+                                {% for option_value in opsiyon.optiyon_value.all %}
+                                
+                                <div class="input-radio mb-2">
+                                    <label class="label-radio">
+                                        <input type="radio" name="sizeSelect" {% if forloop.first %}checked{% endif %}>
+                                        <span class="radio-indicator"></span>
+                                        <span class="radio-content">{{option_value.name}}</span>
+                                    </label>
+                                </div><!-- .input-radio end -->
+                                {% endfor %}
+
+                            </form>
+                        </div>
+
+                    {% else %}
+                        <div class="brands--fiter">
+                            <h4 class="subtitle">{{opsiyon.name}}</h4>
+                            <ul class="list-unstyled mb-0">
+                                {% for option_value  in opsiyon.optiyon_value.all  %}
+                                
+                                <li><a href="#">{{option_value.name}}<span>34</span></a></li>
+
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+
+
+
+
+            </div>
+        </div>
+        
+        
+        <!-- .widget-filter end -->
+
+    </div>
+</div>

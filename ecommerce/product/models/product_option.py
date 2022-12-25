@@ -7,7 +7,7 @@ class Option(models.Model):
         max_length=50,
         verbose_name="orpsiyon adi "
     )
-
+    is_active = models.BooleanField(default=True , verbose_name="Aktif Mi")
     def __str__(self):
         return self.name
 
@@ -16,14 +16,16 @@ class Option_value(models.Model):
     option = models.ForeignKey(
         Option,
         on_delete=models.CASCADE,
-        verbose_name="Option", null=True
+        verbose_name="Option", null=True ,
+        related_name="optiyon_value",
     )
 
     name = models.CharField(
         max_length=50,
-        verbose_name="orpsiyon adi"
+        verbose_name="opsiyon adi"
     )
 
+    is_active = models.BooleanField(default=True , verbose_name="Aktif Mi")
     def __str__(self):
         return self.name
 

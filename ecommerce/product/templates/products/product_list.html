@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<section id="category" class="category category-2 pt-40">
+    <div class="container-fluid col-11 mx-auto">
+        <div class="row">
+            {% comment %} sidebar {% endcomment %}
+            {% include 'products/partials/_side_bar.html' %}
+            {% comment %} sidebar end {% endcomment %}
+            
+            
+            <!-- .col-lg-3 end -->
+            {% comment %} prdoduct list {% endcomment %}
+            {% include 'products/partials/_product_list.html' %}
+            {% comment %} prdoduct list end {% endcomment %}
+
+            <!-- .col-lg-9 end-->
+        </div>
+        <!-- .row end-->
+    </div>
+    <!-- .container end -->
+</section>
+{% endblock content %}
