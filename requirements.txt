@@ -9,3 +9,4 @@ tomli==2.0.1
 tzdata==2022.7
 django-extensions==3.2.1
 ipython==8.7.0
+django-colorfield==0.8.0

@@ -20,6 +20,9 @@ class Categories(MPTTModel):
         on_delete=models.CASCADE
     )
 
+    def get_parent_tree(self):
+        return self.get_ancestors(ascending=False, include_self=True)
+
     def __str__(self):
         full_path = [self.name]
         k = self.parent

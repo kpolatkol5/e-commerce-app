@@ -1,5 +1,7 @@
 {% load static %}
-<div class="col-sm-12 col-md-7 col-lg-9">
+
+
+<div class="col-sm-12 col-md-12 col-lg-9">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 category-options">
             <div class="category-num pull-left pull-none-xs">
@@ -39,78 +41,63 @@
     </div>
     <!-- .row end -->
     <div class="row mb-60">
-
-
         <!-- category item #1 -->
-
-
-        {% for product in product  %}
+        {% for product in products  %}
         <div class="col-sm-6 col-md-6 col-lg-3">
             <div class="category-item">
-                <div class="category--img">
-                    <img src="{% static 'assets/images/categories/cat6/1.jpg' %}" alt="category" />
-                    <span class="featured-item featured-item2">new</span>
+                <div class="carousel owl-carousel carousel-dots" data-slide="1" data-slide-rs="1"
+                    data-autoplay="true" data-nav="false" data-dots="true" data-space="0"
+                    data-loop="true" data-speed="800">
+
+                    {% for product_image in product.product_image.all %}                        
+                    <div class="category--img">
+                            {% if product.tags.last|title == "Popüler Ürün" %}
+                            <span class="featured-item featured-item2">Hot</span>
+                            {% elif product.tags.last|title == "İndirimli Ürün"%}
+                            <span class="featured-item featured-item3">sale</span>
+                            {% elif product.tags.last|title == "Yeni Ürün"%}
+                            <span class="featured-item featured-item2">new</span>
+                            {% endif %}
+                            <a href="{% url 'product-details' product.slug%}" >
+                                <img src="{{product_image.image.url}}" alt="category" />
+                            </a>
+                    </div>
+                    {% endfor %}
+                    
+
                 </div>
-                <!-- .category-img end -->
+                <!-- .carousel end -->
                 <div class="category--content">
                     <div class="category--title">
-                        <h3><a href="#">Hebes Great Chair</a></h3>
+                        <h3><a href="#">{{product.name}}</a></h3>
                     </div>
                     <!-- .category-title end -->
                     <div class="category--price">
-                        <span>$ 42.00</span>
+                        <span>{{product.price}} tl</span>
                     </div>
                     <!-- .category-price end -->
+                    <div class="category--hover">
+                        <div class="category--action">
+                            <a href="page-cart.html" class="btn btn--primary btn--rounded"><i
+                                    class="icon-bag"></i>Sepete Ekle</a>
+                            <a data-toggle="modal" data-target="#product-popup"><i
+                                    class="ti-search"></i></a>
+                            <a href="#"><i class="ti-heart"></i></a>
+                            <a href="#" class="compare" data-toggle="modal"
+                                data-target="#compare-popup"><i class="ti-control-shuffle"></i></a>
+                        </div>
+                    </div>
+                    <!-- .category-hover end -->
                 </div>
                 <!-- .category-content end -->
-                <div class="category--hover">
-                    <div class="category--action">
-                        <a href="page-cart.html" class="btn btn--primary btn--rounded"><i class="icon-bag"></i>ADD TO
-                            CART</a>
-                        <div class="category--action-content">
-                            <div class="category--action-icons">
-                                <a data-toggle="modal" data-target="#product-popup"><i class="ti-search"></i></a>
-                                <a href="#"><i class="ti-heart"></i></a>
-                                <a href="#" class="compare" data-toggle="modal" data-target="#compare-popup"><i
-                                        class="ti-control-shuffle"></i></a>
-                            </div>
-                            <!-- .category-action-icons end -->
-                            <div class="category--hover-info">
-                                <div class="category--title">
-                                    <h3><a href="#">Hebes Great Chair</a></h3>
-                                </div>
-                                <!-- .category-title end -->
-                                <div class="category--price">
-                                    <span>$ 42.00</span>
-                                </div>
-                                <!-- .category-price end -->
-                            </div>
-                            <!-- .category-hover-info end -->
-                            <div class="category--colors">
-                                <a href="#" class="color-1"></a>
-                                <a href="#" class="color-2"></a>
-                                <a href="#" class="color-3"></a>
-                                <a href="#" class="color-4"></a>
-                            </div>
-                            <!-- .category-colors end -->
-                        </div>
-                        <!-- .category-action-content end -->
-                    </div>
-                    <!-- .category-action end -->
-                </div>
-                <!-- .category-hover end -->
             </div>
         </div>
         {% endfor %}
 
-
         <!-- .category-item end -->
 
-
-        <!-- .category-item end -->
     </div>
-
-
+    <!-- .row end -->
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 text-center">
             <a href="#" class="btn--loading">

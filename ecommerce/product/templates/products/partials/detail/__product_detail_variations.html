@@ -1,0 +1,148 @@
+<section id="product-detalis1" class="product-detalis product-detalis-1 bg-lightBlue pb-90 mtop-100">
+    <div class="container-fluid col-11 mx-auto">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="carousel owl-carousel carousel-dots product-carousel carousel-navs" data-slide="1"
+                    data-slide-rs="1" data-autoplay="true" data-nav="true" data-dots="true" data-space="0"
+                    data-loop="true" data-speed="800">
+                    
+                    {% for product_image in object.product_image.all %}
+                    
+                    <div class="product--img-item">
+                        <img src="{{product_image.image.url}}" alt="product" />
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- .carousel end -->
+            </div>
+            <!-- .col-lg-6 end -->
+            <div class="col-sm-12 col-md-12 col-lg-6 col-content">
+                <div class="mb-30">
+                    <ol class="breadcrumb">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="index-2.html">Furniture</a></li>
+                        <li class="active">Sofas</li>
+                    </ol>
+                </div>
+                <div class="product--title">
+                    <h3>{{object.name}}</h3>
+                </div>
+                <!-- .product-title end -->
+                <div class="product--rating">
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star active"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="product--review">03 Customer Review</div>
+                <!--- .product-review end -->
+                <div class="product--price">{{object.price}} tl</div>
+                <!-- .product-price end -->
+                <div class="product--desc-tabs tabs">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li><a href="#product--desc-tabs-1" role="tab" data-toggle="tab" class="active">INFO GUIDE</a>
+                        </li>
+                        <li><a href="#product--desc-tabs-2" role="tab" data-toggle="tab">SHIPPING</a></li>
+                        <li><a href="#product--desc-tabs-3" role="tab" data-toggle="tab">RETURN</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade show active" id="product--desc-tabs-1">
+                            <div class="product--desc">
+                                <p>Trends, vision dominates a lot of our subconscious of the world around us. On top it,
+                                    pleasing images create a better user experience. Rounding up a bunch of specific
+                                    designs.</p>
+                            </div>
+                        </div>
+                        <!-- .tab-pane end -->
+                        <div role="tabpanel" class="tab-pane fade" id="product--desc-tabs-2">
+                            <div class="product--desc">
+                                <p>Sed id interdum urna. Nam ac elit a ante commodo tristique. tum vehicula a hendrerit
+                                    ac nisi. hendrerit ac nisi Lorem ipsum dolor sit perdiet nibh vel magna lacinia
+                                    ultrices. Sed id interdum urna.</p>
+                            </div>
+                        </div>
+                        <!-- .tab-pane end -->
+                        <div role="tabpanel" class="tab-pane fade" id="product--desc-tabs-3">
+                            <div class="product--desc">
+                                <p>Our brand promise is simple: to provide powerful digital marketing solutions to small
+                                    businesses that are looking to build success online</p>
+                            </div>
+                        </div>
+                        <!-- .tab-pane end -->
+                    </div>
+                    <!-- #tab-content end -->
+                </div>
+                <!-- .product-desc-tabs end -->
+                <div class="product--meta">
+                    <div class="product--meta-select product--meta-select2 select--color2">
+                        <span class="title">SELECT COLOR</span>
+                        <div class="dropdown select--dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="color color-1"><span>Sage</span></div> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="color color-1"><span>Sage</span></a></li>
+                                <li><a href="#" class="color color-2"><span>Red</span></a></li>
+                                <li><a href="#" class="color color-3"><span>Green</span></a></li>
+                            </ul>
+                        </div>
+
+                    </div><!-- .product-meta-select end -->
+
+                    <div class="product--meta-select product--meta-select2 select--size2">
+                        <span class="title">SELECT size</span>
+                        <div class="dropdown select--dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="size">XL <span>( 120cm x 50cm)</span></div> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" class="size">XL <span>( 120cm x 50cm)</span></a></li>
+                                <li><a href="#" class="size">XXL <span>( 130cm x 60cm)</span></a></li>
+                                <li><a href="#" class="size">XXXL <span>( 140cm x 70cm)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .product-meta-select end -->
+                    <ul class="product--meta-info list-unstyled">
+                        <li>Stok:<span>{% if object. %}{% endif %} In stock</span></li>
+                        <li>SKU:<span>S3456</span></li>
+
+                        <li>Ürün Tipi:<span>{{object.product_type}}</span></li>
+                        <li>SKU:<span>S3456</span></li>
+                    </ul>
+         
+                    <div class="product--meta-action">
+                        <div class="select-order">
+                            <div class="product-quantity">
+                                <input class="minus" type="button" value="-">
+                                <input type="text" id="pro1-qunt" value="2" class="qty" readonly="">
+                                <input class="plus" type="button" value="+">
+                            </div>
+                        </div>
+                        <a href="page-cart.html" class="btn btn--primary btn--rounded">ADD TO CART</a>
+                        <a href="#" class="fav"><i class="ti-heart"></i></a>
+                        <a href="#" class="compare" data-toggle="modal" data-target="#compare-popup"><i
+                                class="ti-control-shuffle"></i></a>
+                    </div>
+                </div>
+                <div class="product--share">
+                    <span class="share--title">share</span>
+                    <a class="share-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                    <a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                    <a class="share-google-plus" href="#"><i class="fa fa-pinterest-p"></i></a>
+                    <a class="share-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+                <!-- .product-share end -->
+            </div>
+            <!-- .col-lg-6 end -->
+        </div>
+        <!-- .row end -->
+    </div>
+    <!-- .container end -->
+</section>

@@ -10,9 +10,10 @@ class ProductListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['product'] = Products.objects.filter(is_active=True)
+        context['products'] = Products.objects.filter(is_active=True)
         context['product_count'] = Products.objects.filter(is_active=True).count()
         context['option'] = Option.objects.filter(is_active = True)
+
         return context
 
 
